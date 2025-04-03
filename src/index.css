@@ -1,4 +1,33 @@
+@config "../tailwind.config.js";
 @import 'tailwindcss';
-section {
-  padding-top: 20px;
+
+body {
+  @apply text-wrap leading-7 tracking-wider;
+}
+
+@layer base {
+  h1 {
+    @apply text-center text-5xl font-bold uppercase;
+  }
+  h2 {
+    @apply text-3xl font-semibold;
+  }
+  h3 {
+    @apply text-xl font-semibold;
+  }
+  P {
+    @apply text-lg;
+  }
+}
+
+@layer utilities {
+  .bx-shadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .div-shadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  }
 }

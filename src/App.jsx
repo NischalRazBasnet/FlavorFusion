@@ -3,6 +3,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import Rootlayout from './components/Rootlayout';
 import CategoryItems from './pages/category-items/CategoryItems';
 import Home from './home/Home';
+import ItemDetail from './pages/itemDetail/ItemDetail';
+import SearchItem from './home/SearchItem';
 
 export default function App() {
   const router = createBrowserRouter([
@@ -17,6 +19,14 @@ export default function App() {
         {
           path: 'category-items/:label',
           element: <CategoryItems />,
+        },
+        {
+          path: 'item-detail/:id',
+          element: <ItemDetail />,
+        },
+        {
+          path: 'search-item',
+          element: <SearchItem />,
         },
       ],
     },
