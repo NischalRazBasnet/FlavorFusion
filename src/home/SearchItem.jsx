@@ -6,20 +6,20 @@ export default function SearchItem({ data }) {
       {data &&
         data.meals?.map((meal) => {
           return (
-            <div key={meal.idMeal} className='space-y-5  div-shadow'>
+            <div key={meal.idMeal} className='space-y-5'>
               <h1 className='pt-10'>{meal.strMeal}</h1>
-              <div className='px-20 py-10 grid grid-cols-[1fr_2fr] gap-10 space-y-5'>
+              <div className='px-20 max-sm:px-10 py-10 grid grid-cols-[1fr_2fr] max-sm:grid-cols-1 gap-5'>
                 <div>
                   <img
-                    className='h-[400px] w-[500px]'
+                    className='h-[400px] w-[500px] max-sm:size-[300px]'
                     src={meal.strMealThumb}
                     alt=''
                   />
                 </div>
                 <div>
-                  <p>{meal.strInstructions}</p>
+                  <p className='max-sm:text-justify'>{meal.strInstructions}</p>
                 </div>
-                <div className='px-5 flex justify-between gap-2.5'>
+                <div className='px-5 max-sm:px-0 max-sm:w-[100px] flex justify-between gap-2.5'>
                   <div>
                     <h3>Ingredients</h3>
                     {Object.keys(meal).map((ingredients) => {
@@ -52,8 +52,7 @@ export default function SearchItem({ data }) {
                 </div>
                 <div className='place-self-center'>
                   <iframe
-                    width='800'
-                    height='450'
+                    className='w-[800px] h-[450px] max-sm:size-[300px]'
                     src={`https://www.youtube.com/embed/${
                       meal.strYoutube.split('=')[1]
                     }`}

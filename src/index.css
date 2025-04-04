@@ -4,19 +4,22 @@
 body {
   @apply text-wrap leading-7 tracking-wider;
 }
+@theme {
+  --my-grid: repeat(auto-fit, minmax(300px, 1fr));
+}
 
 @layer base {
   h1 {
-    @apply text-center text-5xl font-bold uppercase;
+    @apply text-center text-5xl font-bold uppercase max-sm:text-3xl;
   }
   h2 {
-    @apply text-3xl font-semibold;
+    @apply text-3xl font-semibold max-sm:text-xl;
   }
   h3 {
-    @apply text-xl font-semibold;
+    @apply text-xl font-semibold max-sm:text-lg;
   }
   P {
-    @apply text-lg;
+    @apply text-lg max-sm:text-base;
   }
 }
 

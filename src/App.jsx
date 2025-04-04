@@ -30,9 +30,13 @@ export default function App() {
         },
       ],
     },
+    {
+      path: '*',
+      element: <h1>404 Not Found</h1>,
+    },
   ]);
   return (
-    <div>
+    <div className='max-w-[1750px] mx-auto'>
       <RouterProvider router={router} />
     </div>
   );

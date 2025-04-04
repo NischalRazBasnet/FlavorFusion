@@ -17,9 +17,9 @@ export default function CategoryItems() {
   return (
     <div>
       <div>
-        <h1>{label} Items</h1>
+        <h1 className='pt-10'>{label} Items</h1>
       </div>
-      <div className='px-20 py-10 grid grid-cols-4 place-items-center gap-y-15'>
+      <div className='px-20 max-sm:px-5 py-10 grid grid-cols-(--my-grid) place-items-center gap-y-15'>
         {data &&
           data.meals.map((meal) => {
             return (
